@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/radiogroup_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginContent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/radiobutton_popular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radiobutton_ui"
+            android:button="@null"
+            android:paddingLeft="@dimen/marginSize"
+            android:paddingTop="@dimen/margin4dp"
+            android:paddingRight="@dimen/marginSize"
+            android:paddingBottom="@dimen/margin4dp"
+            android:text="Popular"
+            android:textColor="@drawable/text_color_checked"
+            android:textSize="@dimen/buttonRobotoMedium" />
+
+        <RadioButton
+            android:id="@+id/radiobutton_recomended"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginSize"
+            android:background="@drawable/radiobutton_ui"
+            android:button="@null"
+            android:paddingLeft="@dimen/marginSize"
+            android:paddingTop="@dimen/margin4dp"
+            android:paddingRight="@dimen/marginSize"
+            android:paddingBottom="@dimen/margin4dp"
+            android:text="Recomended"
+            android:textColor="@drawable/text_color_checked"
+            android:textSize="@dimen/buttonRobotoMedium" />
+
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_popular"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup_home" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/marginSize" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/marginSize" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
