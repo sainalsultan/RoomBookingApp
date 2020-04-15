@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                         showFragment(new HomeFragment());
                         break;
                     case R.id.radiobutton_search :
-                        showFragment(new HomeFragment());
+                        showFragment(new SearchFragment());
                         break;
                     case R.id.radiobutton_profile :
                         showFragment(new HomeFragment());

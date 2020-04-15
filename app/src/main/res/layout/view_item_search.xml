@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/marginSize"
+    android:layout_marginRight="@dimen/marginSize"
+    app:cardCornerRadius="@dimen/cardCornerRadius"
+    app:cardElevation="@dimen/cardElevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageview_item_search"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/textview_item_room_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginContent"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Pondok Malino"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/body1RobotoRegular"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageview_item_search"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/textview_item_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin4dp"
+            android:text="Malino | Gowa"
+            android:textSize="@dimen/body2RobotoRegular"
+            app:layout_constraintStart_toStartOf="@+id/textview_item_room_name"
+            app:layout_constraintTop_toBottomOf="@+id/textview_item_room_name" />
+
+        <TextView
+            android:id="@+id/textview_item_rating_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginSize"
+            android:text="(0.0)"
+            android:textSize="@dimen/captionRobotoRegular"
+            android:textColor="@color/colorYellow"
+            app:layout_constraintBottom_toBottomOf="@+id/appCompatRatingBar"
+            app:layout_constraintStart_toEndOf="@+id/appCompatRatingBar"
+            app:layout_constraintTop_toTopOf="@+id/appCompatRatingBar" />
+
+        <TextView
+            android:id="@+id/textview_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginSize"
+            android:layout_marginRight="@dimen/marginSize"
+            android:layout_marginBottom="@dimen/margin8dp"
+            android:text="Rp0/Day"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/body1RobotoRegular"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_item_rating_value" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/appCompatRatingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginSize"
+            app:layout_constraintStart_toStartOf="@+id/textview_item_location"
+            app:layout_constraintTop_toBottomOf="@+id/textview_item_location" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
