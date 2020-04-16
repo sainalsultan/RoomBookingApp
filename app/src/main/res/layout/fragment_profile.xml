@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/img_header"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:src="@drawable/img_header"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+        
+        <View
+            android:id="@+id/view_shadow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/transparent_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/img_header"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="@dimen/marginContent"
+            android:src="@drawable/logo"
+            app:civ_border_color="@color/colorWhite"
+            app:civ_border_width="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/img_header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_header" />
+
+        <TextView
+            android:id="@+id/textview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin8dp"
+            android:text="Sainal Sultan"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/body1RobotoRegular"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/img_header"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView" />
+
+        <TextView
+            android:id="@+id/textview_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin8dp"
+            android:text="sainalsultan@gmail.com"
+            android:textSize="@dimen/body2RobotoRegular"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toBottomOf="@+id/img_header" />
+
+        <TextView
+            android:id="@+id/textview_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginContent"
+            android:text="Information"
+            android:textSize="@dimen/h6RobotoMedium"
+            app:layout_constraintTop_toBottomOf="@id/circleImageView"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginContent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview_information"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
